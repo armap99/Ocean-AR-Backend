@@ -1,2 +1,2 @@
 # Ocean-AR-Backend
-API para Ocean AR hakaton por innovación virtual.
+API para Ocean AR Hackathon por innovación virtual.
