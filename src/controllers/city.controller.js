@@ -25,7 +25,7 @@ module.exports.createCity = async (req, res) => {
     try {
         const { name, urlImage, urlMap } = req.body;
         const city = await createCity({ name, urlImage, urlMap });
-        res.status(200).json({ data: city });
+        res.status(201).json({ data: city });
     } catch (error) {
         console.log(error);
         res.status(500).json({ message: "Server internal error", err: error });

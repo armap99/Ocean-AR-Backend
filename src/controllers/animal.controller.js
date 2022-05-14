@@ -26,7 +26,7 @@ module.exports.createAnimal = async (req, res) => {
     try {
         const { name, description, idCity } = req.body;
         const animal = await createAnimal({ name, description, idCity });
-        res.status(200).json({ data: animal });
+        res.status(201).json({ data: animal });
     } catch (error) {
         console.log(error);
         res.status(500).json({ message: "Server internal error", err: error });

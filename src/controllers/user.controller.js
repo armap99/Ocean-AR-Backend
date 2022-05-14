@@ -15,7 +15,7 @@ module.exports.createUser = async (req, res) => {
     try {
         const { name, email, password } = req.body;
         const user = await createUser({ name, email, password });
-        res.status(200).json({ data: user });
+        res.status(201).json({ data: user });
     } catch (error) {
         console.log(error);
         res.status(500).json({ message: "Server internal error", err: error });
