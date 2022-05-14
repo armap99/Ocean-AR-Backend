@@ -4,7 +4,7 @@ module.exports.isAuthorized = (req, res, next) => {
     try {
         const { authorization } = req.headers;
         const [bearer, token] = authorization.split(" ");
-        jwt.verify(token, "Workick");
+        jwt.verify(token, "OceanAr");
         next();
     } catch (error) {
         res.status(401).json({
