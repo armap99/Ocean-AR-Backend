@@ -1,5 +1,4 @@
 const router = require("express").Router();
-
 const { getAllCities, getCityById, createCity, updateCity } = require("../controllers/city.controller");
 
 router.get("/", getAllCities);
