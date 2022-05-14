@@ -1,5 +1,6 @@
 const { DataTypes } = require("sequelize");
 const sequelize = require("../db");
+const Animal = require("./Animal");
 
 const City = sequelize.define("City", {
     Id: {
@@ -25,5 +26,12 @@ const City = sequelize.define("City", {
     timestamps: false
 }
 );
+
+City.hasMany(Animal, {
+    foreignKey: {
+        name: "IdCity",
+        allowNull: false
+    }
+});
 
 module.exports = City;
