@@ -1,7 +1,9 @@
 const router = require("express").Router();
-const { isAuthorized } = require("../middlewares/isAuthorized");
-const { getAllCities } = require("../controllers/city.controller");
+const { getAllCities, getCityById, createCity, updateCity } = require("../controllers/city.controller");
 
-router.get("/all", [isAuthorized], getAllCities);
+router.get("/", getAllCities);
+router.get("/:id", getCityById);
+router.post("/", createCity);
+router.put("/:id", updateCity);
 
 module.exports = router;
