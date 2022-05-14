@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node src/index",
     "dev": "nodemon src/index",
-    "test": "jest"
+    "test": "jest",
+    "linter": "node ./node_modules/eslint/bin/eslint.js .",
+    "linter-fix": "node ./node_modules/eslint/bin/eslint.js . --fix"
   },
   "repository": {
     "type": "git",
