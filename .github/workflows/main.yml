@@ -13,9 +13,7 @@ jobs:
           fetch-depth: 0
       - name: 'Create dbConfig.js'
         run: |
-        touch ./src/dbConfig.js
-        echo export const DB_URI = ${{secrets.DB_URI}}
-        cat ./src/dbConfig.js
+        echo export const DB_URI = ${{secrets.DB_URI}} > ./src/dbConfig.js
 
       - name: Deploy to Heroku
         if: ${{ github.event_name == 'push' }}
