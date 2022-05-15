@@ -33,11 +33,12 @@ module.exports.getAllAnimals = async () => {
 
 module.exports.createAnimal = async (body) => {
     try {
-        const { name, description, idCity } = body;
+        const { name, description, idCity, urlImage } = body;
         return await Animal.create({
             Name: name,
             Description: description,
-            IdCity: idCity
+            IdCity: idCity,
+            UrlImage: urlImage
         });
     } catch (error) {
         console.log(error);
@@ -47,11 +48,12 @@ module.exports.createAnimal = async (body) => {
 
 module.exports.updateAnimal = async (id, body) => {
     try {
-        const { name, description, idCity } = body;
+        const { name, description, idCity, urlImage } = body;
         return await Animal.update({
             Name: name,
             Description: description,
-            IdCity: idCity
+            IdCity: idCity,
+            UrlImage: urlImage
         }, {
             where: {
                 Id: id
