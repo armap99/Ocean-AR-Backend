@@ -7,7 +7,7 @@ API para Ocean AR Hackathon por innovación virtual.
 <summary>Dependencies </summary>
 Installation 
   
-```js
+```bash
 npm i express cors jsonwebtoken sequelize mysql2 -S
 ```
 
@@ -18,7 +18,7 @@ npm i express cors jsonwebtoken sequelize mysql2 -S
 <summary>DevDependencies </summary>  
 Installation
   
-```js
+```bash
 npm install nodemon eslint jest@26.6.0 --save-dev
 ```
 
