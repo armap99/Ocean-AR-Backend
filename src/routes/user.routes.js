@@ -4,3 +4,5 @@ const { getUserById, createUser, updateUser } = require("../services/user.servic
 router.post("/", createUser);
 router.put("/:id", updateUser);
 router.get("/:id", getUserById);
+
+module.exports = router;
