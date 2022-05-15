@@ -22,6 +22,10 @@ const Animal = sequelize.define("Animal", {
     UrlImage: {
         type: DataTypes.STRING,
         allowNull: true
+    },
+    FileName: {
+        type: DataTypes.STRING,
+        allowNull: true
     }
 
 },

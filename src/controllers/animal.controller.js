@@ -24,8 +24,8 @@ module.exports.getAnimalByIdCity = async (req, res) => {
 
 module.exports.createAnimal = async (req, res) => {
     try {
-        const { name, description, idCity, urlImage } = req.body;
-        const animal = await createAnimal({ name, description, idCity, urlImage });
+        const { name, description, idCity, urlImage, fileName } = req.body;
+        const animal = await createAnimal({ name, description, idCity, urlImage, fileName });
         res.status(201).json({ data: animal });
     } catch (error) {
         console.log(error);
@@ -36,8 +36,8 @@ module.exports.createAnimal = async (req, res) => {
 module.exports.updateAnimal = async (req, res) => {
     try {
         const { id } = req.params;
-        const { name, description, idCity, urlImage } = req.body;
-        const animal = await updateAnimal(id, { name, description, idCity, urlImage });
+        const { name, description, idCity, urlImage, fileName } = req.body;
+        const animal = await updateAnimal(id, { name, description, idCity, urlImage, fileName });
         res.status(200).json({ data: animal });
     } catch (error) {
         console.log(error);

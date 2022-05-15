@@ -33,12 +33,13 @@ module.exports.getAllAnimals = async () => {
 
 module.exports.createAnimal = async (body) => {
     try {
-        const { name, description, idCity, urlImage } = body;
+        const { name, description, idCity, urlImage, fileName } = body;
         return await Animal.create({
             Name: name,
             Description: description,
             IdCity: idCity,
-            UrlImage: urlImage
+            UrlImage: urlImage,
+            FileName: fileName
         });
     } catch (error) {
         console.log(error);
@@ -48,12 +49,13 @@ module.exports.createAnimal = async (body) => {
 
 module.exports.updateAnimal = async (id, body) => {
     try {
-        const { name, description, idCity, urlImage } = body;
+        const { name, description, idCity, urlImage, fileName } = body;
         return await Animal.update({
             Name: name,
             Description: description,
             IdCity: idCity,
-            UrlImage: urlImage
+            UrlImage: urlImage,
+            FileName: fileName
         }, {
             where: {
                 Id: id
