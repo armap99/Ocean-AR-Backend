@@ -15,7 +15,7 @@ jobs:
         run: |
           touch ./src/dbConfig.js
           echo export const DB_URI = ${{secrets.DB_URI}} >> ./src/dbConfig.js
-
+          cat ./src/dbConfig.js
       - name: Deploy to Heroku
         if: ${{ github.event_name == 'push' }}
         uses: akhileshns/heroku-deploy@v3.12.12
