@@ -1,7 +1,7 @@
 const { DataTypes } = require("sequelize");
 const sequelize = require("../db");
 
-const User = sequelize.define("User", {
+const User = sequelize.define("Usuario", {
     Id: {
         primaryKey: true,
         type: DataTypes.INTEGER,
@@ -22,7 +22,7 @@ const User = sequelize.define("User", {
 
 },
 {
-    tableName: "User",
+    tableName: "Usuario",
     timestamps: false
 }
 );
