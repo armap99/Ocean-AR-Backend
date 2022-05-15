@@ -5,65 +5,21 @@ API para Ocean AR Hackathon por innovación virtual.
 
 <details>
 <summary>Dependencies </summary>
-Express
+Installation 
   
-- Istallation 
-  
-```
-npm i express -S
-```
-
-Cors
-  
-- Istallation 
-  
-```
-npm i cors -S
-```
-
-Jsonwebtoken
-  
-- Istallation 
-  
-```
-npm i jsonwebtoken -S
-```
-
-Sequelize
-  
-- Istallation 
-  
-```
-npm i sequelize -S
-```
-
-Mysql2
-  
-- Istallation 
-  
-```
-npm i mysql2 -S
+```bash
+npm i express cors jsonwebtoken sequelize mysql2 -S
 ```
 
 </details>
 
 
 <details>
-<summary>DevDependencies </summary>
-Nodemon
+<summary>DevDependencies </summary>  
+Installation
   
-- Installation
-  
-```
-npm install nodemon --save-dev
-```
-
-Eslint
-  
-- Installation
-  
-```
-npm install eslint --save-dev
+```bash
+npm install nodemon eslint jest@26.6.0 --save-dev
 ```
 
 - Configuration file generation
@@ -74,7 +30,7 @@ npm init @eslint/config
   
 - Eslint rules
 
-```
+```json
 {
     "env": {
         "commonjs": true,
@@ -97,20 +53,12 @@ npm init @eslint/config
     }
 }
 ```
- 
-Jest
-  
-- Installation
-  
-```
-npm install jest@26.6.0 --save-dev
-```
- 
+
 </details>
 
 ## Package.json config
 
-```
+```json
   "scripts": {
     "start": "node src/index",
     "dev": "nodemon src/index",
