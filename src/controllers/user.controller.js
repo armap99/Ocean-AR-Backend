@@ -1,4 +1,4 @@
-const { getUserById, createUser, updateUser } = require("../services/user.service");
+const { getUserById, createUser, updateUser, getUserByEmail } = require("../services/user.service");
 
 module.exports.getUserById = async (req, res) => {
     try {
@@ -27,6 +27,17 @@ module.exports.updateUser = async (req, res) => {
         const { id } = req.params;
         const { name, email, password } = req.body;
         const user = await updateUser(id, { name, email, password });
+        res.status(200).json({ data: user });
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ message: "Server internal error", err: error });
+    }
+};
+
+module.exports.getUserByEmail = async (req, res) => {
+    try {
+        const { email, password } = req.body;
+        const user = await getUserByEmail(email, password);
         res.status(200).json({ data: user });
     } catch (error) {
         console.log(error);

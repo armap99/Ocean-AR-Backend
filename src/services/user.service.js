@@ -40,3 +40,17 @@ module.exports.updateUser = async (id, body) => {
         throw error;
     }
 };
+
+module.exports.getUserByEmail = async (email, password) => {
+    try {
+        return await User.findOne({
+            where: {
+                Email: email,
+                Password: password
+            }
+        });
+    } catch (error) {
+        console.log(error);
+        throw error;
+    }
+};
