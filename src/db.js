@@ -1,9 +1,6 @@
 const { Sequelize } = require("sequelize");
-
-const sequelize = new Sequelize("oceanar", "root", "", {
-    host: "localhost",
-    dialect: "mysql"
-});
+const { DB_URI } = require("./dbConfig");
+const sequelize = new Sequelize(DB_URI);
 
 console.log("DB Connected");
 
