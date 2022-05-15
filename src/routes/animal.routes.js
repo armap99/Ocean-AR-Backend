@@ -1,6 +1,6 @@
 const router = require("express").Router();
 
-const { getAnimalById, getAnimalByIdCity, createAnimal, updateAnimal } = require("../services/animal.service");
+const { getAnimalById, getAnimalByIdCity, createAnimal, updateAnimal } = require("../controllers/animal.controller");
 
 router.post("/", createAnimal);
 router.put("/:id", updateAnimal);
