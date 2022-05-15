@@ -18,6 +18,10 @@ const Animal = sequelize.define("Animal", {
     IdCity: {
         type: DataTypes.INTEGER,
         allowNull: false
+    },
+    UrlImage: {
+        type: DataTypes.STRING,
+        allowNull: true
     }
 
 },
