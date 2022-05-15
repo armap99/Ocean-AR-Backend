@@ -11,6 +11,12 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
+      - name: 'Create dbConfig.js'
+        run: |
+        touch ./src/dbConfig.js
+        echo export const DB_URI = ${{secrets.DB_URI}}
+        cat ./src/dbConfig.js
+
       - name: Deploy to Heroku
         if: ${{ github.event_name == 'push' }}
         uses: akhileshns/heroku-deploy@v3.12.12
@@ -20,3 +26,4 @@ jobs:
           heroku_email: ${{secrets.HEROKU_API_EMAIL}}
           healthcheck: "https://${{secrets.HEROKU_APP}}.herokuapp.com/health"
           rollbackonhealthcheckfailed: true
+
