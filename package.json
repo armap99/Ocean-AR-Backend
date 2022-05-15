@@ -22,6 +22,7 @@
   "homepage": "https://github.com/armap99/Ocean-AR-Backend#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "jsonwebtoken": "^8.5.1",
     "mysql2": "^2.3.3",
